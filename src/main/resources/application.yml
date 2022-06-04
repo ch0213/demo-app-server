@@ -1,1 +1,20 @@
+spring:
+  r2dbc:
+    initialization-mode: always
+    url: r2dbc:h2:mem:///demo;MODE=MySQL;
+    username: sa
+    password:
 
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 100
+    open-in-view: false
+
+logging:
+  level:
+    org.hibernate.SQL: debug
