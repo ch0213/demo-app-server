@@ -1,6 +1,5 @@
-package com.example.cinema.movie.actor.domain;
+package com.example.cinema.movie.domain.actor;
 
-import com.example.cinema.movie.movie.domain.Movie;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
