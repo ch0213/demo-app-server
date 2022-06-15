@@ -9,6 +9,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Objects;
 
+import static javax.persistence.EnumType.STRING;
 import static lombok.AccessLevel.PROTECTED;
 
 @Getter
@@ -31,6 +32,7 @@ public class Member {
 
     private LocalDate birthDate;
 
+    @Enumerated(STRING)
     private Role role;
 
     @Builder
