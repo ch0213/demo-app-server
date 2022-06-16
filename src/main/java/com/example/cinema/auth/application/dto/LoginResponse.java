@@ -16,6 +16,7 @@ public class LoginResponse {
     private String email;
     private Gender gender;
     private LocalDate birthDate;
+    private String role;
     private JwtTokenDto tokens;
 
     public static LoginResponse of(Member member, JwtTokenDto tokens) {
@@ -25,6 +26,7 @@ public class LoginResponse {
                 member.getEmail(),
                 member.getGender(),
                 member.getBirthDate(),
+                member.getRole().getDescription(),
                 tokens);
     }
 }
