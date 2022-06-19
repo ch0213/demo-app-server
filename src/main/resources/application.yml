@@ -1,14 +1,24 @@
 spring:
-  r2dbc:
-    initialization-mode: always
-    url: r2dbc:h2:mem:///demo;MODE=MySQL;
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/cinema-db
     username: sa
     password:
+    driver-class-name: org.h2.Driver
 
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    protocol: smtp
+    default-encoding: UTF-8
+    username: ${EMAIL}
+    password: ${PASSWORD}
+    smtp:
+      start-tls-enable: true
+      auth: true
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
     properties:
       hibernate:
         format_sql: true
@@ -18,3 +28,6 @@ spring:
 logging:
   level:
     org.hibernate.SQL: debug
+
+jwt:
+  secret-key: ${SECRET-KEY}
