@@ -1,10 +1,7 @@
 package com.example.cinema.member.domain;
 
-import com.example.cinema.member.exception.NotExistRoleException;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-
-import java.util.Arrays;
 
 @Getter
 @RequiredArgsConstructor
